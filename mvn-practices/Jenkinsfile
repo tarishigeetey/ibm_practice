@@ -11,7 +11,7 @@ pipeline{
            stage('compile Stage'){
           steps {
           withMaven(maven : 'Maven'){
-              bat 'mvn clean compile'
+              bat 'mvn -f mvn-practices/pom.xml clean compile'
                 }
              }
            }
@@ -19,7 +19,7 @@ pipeline{
            stage('Test Stage'){
           steps {
           withMaven(maven : 'Maven'){
-              bat 'mvn test'
+              bat 'mvn -f mvn-practices/pom.xml test'
                 }
              }
            }
