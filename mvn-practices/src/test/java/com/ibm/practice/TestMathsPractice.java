@@ -36,6 +36,10 @@ public class TestMathsPractice {
 		assertThrows(ArithmeticException.class, () -> maths.div(2, 0));
 	}
 	
+	@Test
+	public void testSquare() {
+		assertEquals(25, maths.square(5));
+	}
 	
 	@Test
 	public void testIncorrectSquare() {
